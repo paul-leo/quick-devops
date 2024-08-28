@@ -27,12 +27,12 @@ check_and_install_prerequisites() {
     fi
 
     # 检查并安装 ZeroTier
-    if ! command -v zerotier-cli &> /dev/null; then
-        echo "ZeroTier not found. Installing..."
-        curl -s https://install.zerotier.com | sudo bash
-    else
-        echo "ZeroTier is already installed."
-    fi
+    # if ! command -v zerotier-cli &> /dev/null; then
+    #     echo "ZeroTier not found. Installing..."
+    #     curl -s https://install.zerotier.com | sudo bash
+    # else
+    #     echo "ZeroTier is already installed."
+    # fi
 
     echo "All prerequisites are installed."
 }
