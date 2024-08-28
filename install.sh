@@ -73,6 +73,7 @@ case $choice in
       else
         echo "kubectl is already installed."
       fi
+      ;;
     2)
       if ! command -v kubectl &> /dev/null; then
         echo "Installing K3s worker node..."
