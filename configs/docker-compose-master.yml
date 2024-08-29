@@ -3,6 +3,8 @@ version: '3'
 services:
   jenkins:
       image: jenkins/jenkins:lts
+      environment:
+        - REGISTRY_MIRROR=https://registry.cn-hangzhou.aliyuncs.com
       container_name: jenkins
       user: root
       ports:
@@ -15,3 +17,4 @@ services:
         - /usr/bin/docker:/usr/bin/docker
         # - /usr/local/bin/kubectl:/usr/bin/kubectl
       restart: always
+      
