@@ -1,14 +1,17 @@
-jenkins:
-    image: jenkins/jenkins:lts
-    container_name: jenkins
-    user: root
-    ports:
-      - "8080:8080"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-    volumes:
-      - ../storage/jenkins:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /usr/bin/docker:/usr/bin/docker
-      # - /usr/local/bin/kubectl:/usr/bin/kubectl
-    restart: always
+version: '3'
+
+services:
+  jenkins:
+      image: jenkins/jenkins:lts
+      container_name: jenkins
+      user: root
+      ports:
+        - "8080:8080"
+      extra_hosts:
+        - "host.docker.internal:host-gateway"
+      volumes:
+        - ../storage/jenkins:/var/jenkins_home
+        - /var/run/docker.sock:/var/run/docker.sock
+        - /usr/bin/docker:/usr/bin/docker
+        # - /usr/local/bin/kubectl:/usr/bin/kubectl
+      restart: always
