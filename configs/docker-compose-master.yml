@@ -4,7 +4,8 @@ services:
   jenkins:
       image: jenkins/jenkins:lts
       environment:
-        - REGISTRY_MIRROR=https://registry.cn-hangzhou.aliyuncs.com
+        - HTTP_PROXY=http://192.168.3.81:8445
+        - HTTPS_PROXY=http://192.168.3.81:8445
       container_name: jenkins
       user: root
       ports:
