@@ -66,13 +66,12 @@ case $choice in
         # # 安装 Keycloak
         # echo "Installing Keycloak..."
         # kubectl apply -f configs/keycloak-deployment.yaml
-        
-        # 安装 Jenkins
-        echo "Installing Jenkins..."
-        bash scripts/jenkins_setup.sh
       else
         echo "kubectl is already installed."
       fi
+        # 安装 Jenkins
+        echo "Installing Jenkins..."
+        bash scripts/jenkins_setup.sh
       ;;
     2)
       if ! command -v kubectl &> /dev/null; then
