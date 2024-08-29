@@ -1,2 +1,2 @@
 # 运行 docker compose
-sudo docker compose up -d --config ./configs/docker-compose-master.yml
+sudo docker compose ./configs/docker-compose-master.yml up -d 
